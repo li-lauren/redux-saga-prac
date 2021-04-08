@@ -1,9 +1,10 @@
 import { createStore, combineReducers } from 'redux';
+import counterReducer from './ducks/counter';
 
-const reducers = combineReducers({
-
+const reducer = combineReducers({
+  counter: counterReducer
 });
 
-const store = createStore();
+const store = createStore(reducer);
 
 export default store;

@@ -10,6 +10,7 @@ export const decrement = () => ({
   type: DECREMENT
 });
 
+// set up counterReducer
 const initialState = {
   count: 0
 };
