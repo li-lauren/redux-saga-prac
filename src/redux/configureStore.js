@@ -9,12 +9,15 @@ const reducer = combineReducers({
   user: userReducer
 });
 
+// Create the saga middleware
 const sagaMiddleware = createSagaMiddleware();
 
 const middleware = [sagaMiddleware];
 
+// Mount in on the store
 const store = createStore(reducer, {}, applyMiddleware(...middleware));
 
+// then run the saga
 sagaMiddleware.run(watcherSaga);
 
 export default store;
